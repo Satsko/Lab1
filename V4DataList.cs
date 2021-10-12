@@ -40,12 +40,13 @@ namespace Lab1
         }
         public override string ToString()
         {
-            return $"V4MainCollection {base.ToString()} Count = {Count}";
+            return $"V4DataList {base.ToString()} Count = {Count}";
         }
         public override string ToLongString(string format)
         {
-            string str = $"V4MainCollection {base.ToString()} Count = {Count}";
+            string str = $"V4DataList {base.ToString()} Count = {Count}";
             foreach (DataItem i in Lst) str += "\n" + i.ToLongString(format);
+            //str += string.Join("\n", Lst);
             return str;
         }
     }

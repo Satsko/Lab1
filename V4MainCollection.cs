@@ -29,13 +29,15 @@ namespace Lab1
         public override string ToString()
         {
             string str = "V4MainCollection\n";
-            foreach (V4Data i in this.V4Lst) str += "\n" + i.ToString();
+            //foreach (V4Data i in this.V4Lst) str += "\n" + i.ToString();
+            str += string.Join("\n", V4Lst);
             return str;
         }
         public string ToLongString(string format)
         {
-            string str = "V4MainCollection\n";
+            string str = "V4MainCollection";
             foreach (V4Data i in V4Lst) str += "\n" + i.ToLongString(format);
+            //str += string.Join("\n", V4Lst);
             return str;
         }
     }

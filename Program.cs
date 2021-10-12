@@ -46,6 +46,12 @@ namespace ConsoleApp1
                 Console.WriteLine($"MaxFromOrigin{i+1} = {v4MainCollection[i].MaxFromOrigin}");
             }
             Console.WriteLine("------------end3-------------\n\n");
+
+            Console.WriteLine(v4MainCollection.ToString());
+            V4DataList v4DL = new V4DataList("V4DataList1", DateTime.Now);
+            v4DL.AddDefaults(7, DelegateFunction.Fv2);
+            //Console.WriteLine(v4DL.ToString());
+            //Console.WriteLine(v4DL.ToLongString("00.000"));
         }
    }
 }

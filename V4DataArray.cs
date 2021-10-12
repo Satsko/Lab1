@@ -21,16 +21,13 @@ namespace Lab1
             this.Y = y;
             this.Step = step;
             this.Node = new Vector2[x, y];
-            Vector2 v2;
             for (int i = 0; i < x; i++)
                 for (int j = 0; j < y; j++)
                 {
-                    v2.X = i * step.X;
-                    v2.Y = j * step.Y;
-                    this.Node[i, j] = node(v2);
+                    this.Node[i, j] = node(new Vector2(i * step.X, j * step.Y));
                 }
         }
-        public override int Count { get { return X * Y; } }
+        public override int Count { get { return Node.Length; } }
         public override float MaxFromOrigin
         {
             get { return Vector2.Distance(Vector2.Zero, new Vector2((X-1)*Step.X, (Y-1)*Step.Y)); }
@@ -42,7 +39,7 @@ namespace Lab1
             for (int i = 0; i < X; i++)
                 for (int j = 0; j < Y; j++)
                 {
-                    str += $"\n({(i * Step.X).ToString(format)},{(j * Step.Y).ToString(format)}):  ({(Node[i, j].X).ToString(format)},{(Node[i, j].Y).ToString(format)}),  |({Node[i,j].X.ToString(format)},{Node[i,j].Y.ToString(format)})| = {Vector2.Distance(Vector2.Zero, Node[i,j])} ";
+                    str += $"\n({(i * Step.X).ToString(format)},{(j * Step.Y).ToString(format)}):  ({(Node[i, j].X).ToString(format)},{(Node[i, j].Y).ToString(format)}),  |({Node[i, j].X.ToString(format)},{Node[i, j].Y.ToString(format)})| = {Vector2.Distance(Vector2.Zero, Node[i, j])} ";
                 }
             return str;
         }
