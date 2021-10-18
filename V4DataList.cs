@@ -36,7 +36,11 @@ namespace Lab1
         public override int Count { get { return Lst.Count(); } }
         public override float MaxFromOrigin
         {
-            get { return Lst.Max(x => Vector2.Distance(Vector2.Zero, x.Point)); }
+            get 
+            {
+                if (Count != 0) return Lst.Max(x => Vector2.Distance(Vector2.Zero, x.Point));
+                else return 0;
+            }
         }
         public override string ToString()
         {

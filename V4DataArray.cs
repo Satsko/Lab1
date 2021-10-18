@@ -30,7 +30,11 @@ namespace Lab1
         public override int Count { get { return Node.Length; } }
         public override float MaxFromOrigin
         {
-            get { return Vector2.Distance(Vector2.Zero, new Vector2((X-1)*Step.X, (Y-1)*Step.Y)); }
+            get 
+            {
+                if (Count!=0) return Vector2.Distance(Vector2.Zero, new Vector2((X - 1) * Step.X, (Y - 1) * Step.Y));
+                else return 0;
+            }
         }
         public override string ToString() => $"V4DataArray {base.ToString()} \nnX = {X}, nY = {Y}, Step({Step.X},{Step.Y})";
         public override string ToLongString(string format)

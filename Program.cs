@@ -9,7 +9,7 @@ namespace ConsoleApp1
         static void Main()
         {
             Console.WriteLine("------------start1------------");
-            V4DataArray v4DataArray = new V4DataArray("V4DataArray", DateTime.Now, 5, 4, new Vector2(0.4f,0.6f), DelegateFunction.Fv2);
+            V4DataArray v4DataArray = new V4DataArray("V4DataArray", DateTime.Now, 2, 0, new Vector2(0.4f,0.6f), DelegateFunction.Fv2);
             Console.WriteLine(v4DataArray.ToLongString("0.00"));
             V4DataList v4DataList = v4DataArray.TransForm();
             Console.WriteLine(v4DataList.ToLongString("0.00"));
@@ -22,8 +22,8 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------start2-----------");
             V4MainCollection v4MainCollection = new V4MainCollection();
-            V4DataArray v4DataArray1 = new V4DataArray("V4DataArray1", DateTime.Now, 2, 3, new Vector2(2.0f, 4.0f), DelegateFunction.Fv2);
-            V4DataArray v4DataArray2 = new V4DataArray("V4DataArray2", DateTime.Now, 3, 4, new Vector2(1.0f, 0.5f), DelegateFunction.Fv2);
+            V4DataArray v4DataArray1 = new V4DataArray("V4DataArray1", DateTime.Now, 1, 3, new Vector2(2.0f, 4.0f), DelegateFunction.Fv2);
+            V4DataArray v4DataArray2 = new V4DataArray("V4DataArray2", DateTime.Now, 3, 2, new Vector2(1.0f, 0.5f), DelegateFunction.Fv2);
             v4MainCollection.Add(v4DataArray1);
             v4MainCollection.Add(v4DataArray2);
             V4DataList v4DataList1 = new V4DataList("V4DataList1", DateTime.Now);
